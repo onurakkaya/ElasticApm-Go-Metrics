@@ -1,0 +1,263 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --light-green: #00ff00;
+  --light-blue: #4466ff;
+  --light-blue-v2: #4488ff;
+  --lighter-blue: #44AAff;
+  --dark-green: #003b00;
+  --dark-grey: #777;
+  --light-grey: #dadce0;
+  --custom-white: #FDFFFA;
+  --custom-black: #151500;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.button {
+  border: 2px solid var(--light-blue);
+  color: var(--light-blue);
+  border-radius: 4px;
+  padding: 6px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  z-index: 6;
+}
+
+a.button:hover {
+  text-decoration: none;
+  background-color: var(--custom-white);
+  color: var(--light-blue);
+}
+
+.background {
+  position: relative;
+  background-color: var(--custom-white);
+  overflow: hidden;
+}
+
+.background:before{
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.7;
+  background-image: url("./bodybackground.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--light-blue);
+  padding: 0px 7px;
+  align-items: center;
+  z-index: 9999;
+}
+
+.logo {
+  color: #002200;
+}
+
+form {
+  height: calc(100% - 10px);
+}
+
+.search-input {
+  width: 500px;
+  height: 100%;
+  border-color: transparent;
+  background-color: var(--custom-white);
+  color: var(--custom-black);
+  font-size: 16px;
+  line-height: 1.4;
+  padding-left: 5px;
+}
+
+.button-fill{
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 20px 40px;
+  z-index: 5;
+}
+
+.result-count {
+  color: var(--dark-grey);
+  text-align: center;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 6;
+}
+
+.menu-button{
+  display: flex;
+  align-items: center;
+  padding: 6px 6px;
+  height: 100%;
+  color: var(--custom-white) !important;
+}
+
+.menu-button:hover{
+  background-color: var(--lighter-blue) !important;
+  color: var(--custom-white) !important;
+  text-decoration: none;
+}
+
+.github-button {
+  background-color: var(--light-blue-v2) !important;
+}
+
+.search-results {
+  list-style: none;
+  position: relative;
+  z-index: 6;
+}
+
+.news-article {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  border: 1px solid var(--light-grey);
+  padding: 15px;
+  border-radius: 4px;
+  justify-content: space-between;
+}
+
+.article-image {
+  width: 200px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.title {
+  margin-bottom: 15px;
+}
+
+.description {
+  color: var(--dark-grey);
+  margin-bottom: 15px;
+}
+
+.metadata {
+  display: flex;
+  color: var(--custom-white);
+  font-size: 14px;
+}
+
+.published-date {
+  font-weight: 600;
+  color: var(--light-blue); 
+}
+
+.published-date::before {
+  content: '\0000a0\002022\0000a0';
+  margin: 0 3px;
+  color: var(--light-blue);
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+.previous-page {
+  margin-right: 20px;
+}
+
+.source {
+  font-weight: 600;
+  color: var(--light-blue)
+}
+
+footer{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 20px 0px;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-text{
+  width: 100%;
+  text-align: center;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.footer-text:hover {
+  text-decoration: none !important;
+}
+
+@media screen and (max-width: 550px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 10px;
+  }
+
+  .logo {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  form, .search-input {
+    width: 100%;
+  }
+
+  .github-button {
+    display: none;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .article-image {
+    display: none;
+  }
+}
