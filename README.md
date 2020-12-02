@@ -2,9 +2,9 @@
 ElasticApm Go Agent integration tutorial.
 
 Application UI (Referenced Web Application - https://freshman.tech/web-development-with-go/)
-![ui](#url)
+![ui](readme-image/ui.jpg)
 Elastic Apm - Kibana 
-![apm](#url)
+![apm](readme-image/apm.jpg)
 ## Prerequisites
 You need to have [Go](https://golang.org/dl/) installed on your computer. The version used to test the code in the tutorial is **1.15.3**.
 ## Get started
