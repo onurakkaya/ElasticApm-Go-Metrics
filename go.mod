@@ -10,6 +10,6 @@ require (
 	github.com/prometheus/procfs v0.2.0 // indirect
 	go.elastic.co/apm v1.11.0
 	go.elastic.co/apm/module/apmhttp v1.6.0
-	golang.org/x/sys v0.0.0-20201201145000-ef89a241ccb3 // indirect
+	golang.org/x/sys v0.1.0 // indirect
 	howett.net/plist v0.0.0-20201026045517-117a925f2150 // indirect
 )
